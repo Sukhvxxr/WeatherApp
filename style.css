@@ -36,15 +36,22 @@ input {
     min-width: 25rem;
 }
 
+input.hover{
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.342);
+}
+
 /*main part */
 .card {
     /* Add shadows to create the "card" effect */
     color: rgb(65, 65, 65);
     margin-top: 2rem;
-    background-color: rgba(255, 255, 255, 0.705);
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.774);
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.397);
     transition: 0.3s;
+    align-items: center;
+    justify-content: center;
 }
 
 .card:hover {
@@ -62,6 +69,7 @@ input:focus {
 
 .weather h2 {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 0;
 }

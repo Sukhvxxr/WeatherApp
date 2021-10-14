@@ -15,17 +15,23 @@ async function getWeatherByLocation(city) {
     addWeatherToPage(respData);
 }
 
+
 function addWeatherToPage(data) {
     const temp = KtoC(data.main.temp);
 
     const weather = document.createElement("div");
+
+    
     weather.classList.add("weather");
+    console.log(weather.classList);
 
     weather.innerHTML = `
         <h2><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /> 
         ${temp}°C <img 
         src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /></h2>
+        
         <small>${data.weather[0].main}</small>
+        <h2>${data.name}</h2>
     `;
 
     // cleanup
@@ -33,6 +39,7 @@ function addWeatherToPage(data) {
 
     main.appendChild(weather);
 
+    // condition loop for background img
     if (data.weather[0].main=='Clear'){
         document.body.style.backgroundImage="url('./Assets/clear.jpg')";
       }
@@ -59,6 +66,7 @@ function addWeatherToPage(data) {
 function KtoC(K) {
     return Math.floor(K - 273.15);
 }
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
