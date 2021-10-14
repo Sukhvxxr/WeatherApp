@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body {
+    background-image: url('./Assets/default.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 12px;
+    min-height: 100vh;
+}
+
+/* part 1 */
+.heading {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 4px 10px rgba(32, 32, 32, 0.986);
+    font-weight: bold;
+    font-size: 200%;
+    letter-spacing: 0.02em;
+    padding: 0 0 10px 0;
+}
+
+input {
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.247);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.8rem;
+    padding-left: 1.5rem;
+    min-width: 25rem;
+}
+
+/*main part */
+.card {
+    /* Add shadows to create the "card" effect */
+    color: rgb(65, 65, 65);
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.705);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.397);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.342);
+}
+
+input:focus {
+    outline: none;
+}
+
+.weather {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.weather h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
